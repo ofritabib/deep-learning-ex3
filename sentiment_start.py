@@ -21,10 +21,10 @@ hidden_size = 64        # to experiment with
 run_recurrent = True    # else run Token-wise MLP
 use_RNN = True          # otherwise GRU
 atten_size = 5          # atten > 0 means using restricted self atten
-run_recurrent_comparison = False  # set True to train all 4 RNN/GRU configs
-run_mlp = True          # set True to train MLP experiment
-use_mlp_atten = True    # True = MLP + restricted self-attention; False = plain MLP only
-run_attention = False   # set True to train standalone attention model (Task 3)
+run_recurrent_comparison = True   # Task 1: train RNN/GRU with h=64 and h=128
+run_mlp = True                    # Task 2 & 4: train plain MLP and MLP+attention
+use_mlp_atten = True              # Task 4: also train MLP with restricted self-attention
+run_attention = False             # standalone ExLRestSelfAtten (covered by use_mlp_atten)
 
 reload_model = False
 num_epochs = 10
